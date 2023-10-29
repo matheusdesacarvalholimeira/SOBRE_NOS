@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs com Nomes e Funções Fora da Div</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2px;
+            padding: 30px;
+            margin-top: 100px;
+        }
+
+        .square-div {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;margin-top: 30px;
+        }
+
+        .square-div2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .square-div::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+        }
+
+        .name {
+            text-align: center;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .function {
+            text-align: center;
+            font-style: italic;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .ajj{
+            padding: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ajj">
+    <div class="container">
+        <div class="square-div" data-number="Miguel">
+            <div class="square-div2" data-number="1">
+                <img src="img/WhatsApp Image 2023-10-29 at 18.45.07_3dbb6789.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">front end</p>
+        </div>
+        <div class="square-div" data-number="Renan">
+            <div class="square-div2" data-number="1">
+                <img src="img/WhatsApp Image 2023-10-29 at 18.18.09_4ef300a8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">front end</p>
+        </div>
+        <div class="square-div" data-number="Negao">
+            <div class="square-div2" data-number="1">
+                <img src="img/IMG_20231029_173843.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">front end</p>
+        </div>
+        <div class="square-div" data-number="tonton">
+            <div class="square-div2" data-number="1">
+                <img src="img/Screenshot_20230704_164827_Gallery.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">game end</p>
+        </div>
+        <div class="square-div" data-number="Wando">
+            <div class="square-div2" data-number="1">
+                <img src="img/image.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">desing</p>
+        </div>
+        <div class="square-div" data-number="SA">
+            <div class="square-div2" data-number="1">
+                <img src="img/118131034.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="function">WEB</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
